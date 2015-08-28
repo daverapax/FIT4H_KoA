@@ -1,0 +1,8 @@
+Parameter:
+	#Die Einstellungen gelten für alle git-Anwendungen des Users auf diesem Rechner
+
+git config --global user.name "daverapax"
+git config --global user.email "generation.doof@googlemail.com"
+
+git config --global credential.helper 'cache --timeout=3600'
+	#Damit nicht bei jedem push die Daten eingegeben werden müssen werden die daten für 3600s gespeichert

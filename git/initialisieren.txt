@@ -1,0 +1,16 @@
+github.com 
+	neues Repro anlegen
+
+Host:
+	mkdir testname		#Dies ist ein Kommentar
+	cd testname				#verzeichnis wechseln
+	git init					
+	touch text.txt. 	#Erzeugen einer Datei
+	git add text.txt 	#Die Datei wird ins neue Repo aufgenommen
+	git commit -m "NeuerName" #Die neue Datei wird in den Bereich der Dateien geschoben, die mit dem Server synchronisiert werden sollen
+
+	git remote add origin https://github.com/daverapax/FIT4H_KoA 
+	#Das lokale Repo wird mit einem öffentlichen Repo verbunden; es wird dem bestehenden Github.Repo hinzugefügt.
+
+	git push -u origin master
+		#Die Änderungen die aud dem lokalen Repro durchgeführt wurden werden mit dem stand auf dem server verglichen und die neue version wird auf den server kopiert
