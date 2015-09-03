@@ -1,3 +1,6 @@
+http://www.shellbefehle.de/befehle/
+
+
 cd
 
 mkdir
@@ -7,3 +10,7 @@ ls
 cp
 
 rm
+	#löscht Dateien und Verzeichnisse
+	rm -rf
+		#-r rekursive ; von hier alle Verzeichnisse
+		#-f force; alles wird ohne Nachfrage gelöscht
