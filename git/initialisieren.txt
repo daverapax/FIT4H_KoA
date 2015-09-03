@@ -2,7 +2,7 @@ github.com
 	neues Repro anlegen
 
 Host:
-	mkdir testname		#Dies ist ein Kommentar
+	mkdir testname		#Verzeichnis anlegen
 	cd testname				#verzeichnis wechseln
 	git init					
 	touch text.txt. 	#Erzeugen einer Datei
