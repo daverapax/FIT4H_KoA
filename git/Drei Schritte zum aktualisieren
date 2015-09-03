@@ -1,0 +1,16 @@
+Drei Schritte zum Update
+
+1. Sicherstellen das sie in der Basis des verwalteten Verzeichnisses sind (/home/pan/Dokumente/**)
+
+2. Geben sie den Befehl 
+
+	git add . -A 	# . steht für das aktuelle Verzeichnis
+								# -A steht für alle, geänderten, hinzugefügten, gelöschte Dateien
+
+ein.
+
+3. git commit -am "Was passiert ist"
+	#Bestätigung der Änderungen lokal
+
+4. git push origin master
+	#Hochladen der neuen Version auf Server
