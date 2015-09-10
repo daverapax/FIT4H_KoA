@@ -2,15 +2,63 @@ http://www.shellbefehle.de/befehle/
 asd
 
 cd
+	#ermöglicht das Navigieren innerhalb des Dateisystems
+
+	cd ..
+		# einen zurück
+
+	cd ~
+		# ~ steht für /home/pan
+
+	cd Dokumente
+		# relativer Pfad: vom aktuellen Standort aus
+
+	cd /home/pan/Downloads
+		# absoluter Pfad
+
+	cd /
+		# /oberste Dateiebene
+
 
 mkdir
+	
+	mkdir verzeichnis01
+		#erzeugt ein Unterverzeichnis im aktuellen Verzeichnis
+
+	mkdir /home/pan/Dokumente/Verzeichnis02
+		#Verzeichnis mit absoluter Pfadangabe erzeugen
+
+touch 
+	
+	touch dateiname
+		#erstellt im aktuellen Verzeichnis eine Datei
 
 ls
+	#erzeugt eine Verzeichnis- und Dateiausgabe
+	ls -lat
+		-a: alls anzeigen, auch die versteckten Dateien und Ordner
+		-l: long, viel Info
+		-t: sortiert nach Zeit, jüngstes Datum oben
+
 
 cp
+	cp quelle ziel
+	cp datei03 datei04
+	cp -r Verzeichnis1 Verzeichnis2
+		#beim kopieren von Verzeichnissen muss der Schalter -r angegeben werden. Dann wird ein Quellverzeichnis mit allen Unterordnern und Dateien an das Ziel kopiert.
 
 rm
 	#löscht Dateien und Verzeichnisse
 	rm -rf
 		#-r rekursive ; von hier alle Verzeichnisse
 		#-f force; alles wird ohne Nachfrage gelöscht
+
+less
+	less dateiname
+		#zeit den Datei Seitenweise an.
+		#weiterblätern mit: Leertaste, Enter, Pfeiltasten, Bild Ab/Auf
+		#Beenden mit Q
+
+mv 
+	mv quelle ziel
+		#der Befehl wird zum Verschieben von Dateien und ordnern benutzt
