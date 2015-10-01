@@ -1,0 +1,33 @@
+1. Archivieren
+	Beim Archivieren werden verschidene Quellen (Dateien) sequentielle in einen Datenstrom geschrieben. Der Sinn liegt in der Sicherung von Daten, etwa auf einem Magnetband.
+	Es gibt drei Modi:
+		Erzeugen eines Archivs (Schalter -c)
+		Inhalt eines Archivs anzeigen (-t)
+		Entpacken eines Archivs (-x)
+
+	Archiv erzeugen
+		tar -cf <archivname.tar> <dateinamen>
+		tar -cf <archivname.tar> <ordnername>
+		tar -czf <archivname.tar.gz> <ordnername> 
+			#Archiv wird erzeugt und gleich komprimiert
+
+	Archiv anzeigen
+		less <archivname>
+		tar -tvf <archivname>
+
+	Archiv entpacken
+		tar -xf <archivname> 
+			#entpackt Archiv im aktuellen Verzeichniss
+		tar -xzf <archivname> 
+			#entpackt und extrahiert
+		tar -xzf <archivname> -C /home/Docs 
+			#das Archiv wird in dem Ordner Docs entpackt; der Ordner muss vorhanden sein
+
+2. Komprimieren
+	Zwei unter Linux übliche Befehle:
+		compress
+		gzip
+	gzip erreicht eine bessere Komprimierung, sodas compress skuzessive verdrängt wird
+
+	Syntax:
+		gzip <dateiname>
