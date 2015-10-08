@@ -62,3 +62,53 @@ less
 mv 
 	mv quelle ziel
 		#der Befehl wird zum Verschieben von Dateien und ordnern benutzt
+
+ln
+	ln quelle ziel
+		#Es wird mit dem Befehl ein Link auf eine Datei erzeugt.
+		Damit wird in dem Inode-Table der Festplatte ein Verweis zwischen dem Namen  <ziel> und der schon existierenden <quelle> erzeugt.
+		#Wird die Datei <ziel> geändert, ändert sich somit auch die Dateo <quelle>
+		#Hardlink
+		#Wird benötigt bei der Installation von komplexen Programmen. Es wird dann ein Verweis auf die Programme im System erstellt, die das zu installierende Programm benötigt.
+
+	ln -s quelle ziel
+		#Sysmbolischer Link
+		#ein Verzeichnis oder eine Quelle ausßerhalb der Festplatte können so integriert werden.
+
+find
+	#Sucht und findet Dateien im Dateisystem
+
+	Platzhalter:
+				?				steht für ein Zeichen
+				*				steht für beliebig viele Zeichen
+				[123]		ein Zeichen das 1,2 oder 3 sein kann
+				[ab]		ein Zeichen das a oder b sein kann
+				[a-d]		ein Zeichen das innerhalb einer Range 
+
+
+
+	Beispiele:
+		find datei?.txt
+			sucht im aktuellen Verzeichnis nach einer Datei die mit <datei> beginnt und einschließend ein beliebiges Zeichen hat und dann mit <.txt> endet
+
+		find verzeichnis -name datei1.txt
+			#sucht im Verzeichnis <verzeichnis> nach genau dieser Datei
+
+		find /etc -name passwd -print 2>dev/null
+			#im Verzeichnis </etc> wird nach einer Datei mit dem Namen <passwd> gesucht. Die Fehlermeldungen werden nach /dev/null (nirwana) geschickt, also nicht ausgegeben
+
+grep
+	#Mit Hilfe dieses Befehls werden bestimmte Suchmuster in Dateien oder Standardausgabe gefunden.
+
+	BSP:
+		lspci | grep VGA
+			#Von der Ausgabe der Hardwareconfiguration (lspci) wird nach dem Suchmuster VGA gesucht
+
+		grep pan /etc/passwd
+			#In der Datei /etc/passwd wird nach dem Suchmuster :pan gesucht
+
+		grep '^[AS]' arnie.dat
+			#sucht am Anfang der Zeile (^) nach großem S oder A in der Datei arnie.dat
+
+		grep '\<Coleman\>' arnie.dat
+			# sucht nach dem ganzen Wort (Leerzeichen am Anfang und Ende) Coleman
