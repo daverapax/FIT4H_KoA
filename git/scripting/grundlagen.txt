@@ -1,0 +1,25 @@
+#!/bin/bash
+	Shebang-Zeile am Anfang der Datei mit der Pfadangabe des Interpreters
+
+echo 
+	echo "Hanswurst"
+	#erzeugt eine Ausgabe
+
+Die Datei ausführbar machen:
+	chmod +x NameDerDatei
+
+Aufruf der Datei
+	./test.sh
+		#es ist eine absolute Pfadangabe notwendig
+
+Variablen
+	Definition:
+		var_name3
+			letter, number, underscore sind möglich. Casesensitive
+	Aufruf der Variable
+		$var_name3
+			beim Aufrufen muss ein Dollarzeichen vorangestellt werden
+
+	Zuweisungs-Operator reagiert niegativ auf Leerzeichen
+		var_name3 = "etwas" #problematisch
+		var_name3="etwas" #besser bis gut
