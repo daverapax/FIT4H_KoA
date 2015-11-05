@@ -1,0 +1,25 @@
+read -p "Los p du Sau! " eingabe
+if [[ $eingabe == 'p' ]] 
+then
+	echo "TipTop!!!"
+elif [[ $eingabe == 'q' ]]
+then
+	echo "Yeah!!!"
+else
+	echo "kommst nich klar oder was?"
+fi
+
+Bedingung:
+	STRING:
+		[[ $bed ]]						#gibt true wenn nicht leer
+		[[ $bed = "wert" ]]		#gibt true wenn übereinstimmung
+
+Arithmetrisch
+	if [[ $eingabe -eq 60 ]] 			#überprüft auf gleichheite
+	elif [[ $eingabe -gt 40 ]]		#überprüft auf größer als
+	elif [[ $eingabe -lt 20 ]]		#überprüft auf kleiner als
+
+	http://www.semibyte.de/wp/informatics/linux/bash-formulierung-von-bedingungen/
+
+Datei:
+	
