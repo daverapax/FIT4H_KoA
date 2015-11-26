@@ -1,0 +1,31 @@
+Dateien und Ordner haben Besitzer, besitzende Gruppen.
+	drwxrwxr-x  5 root gruppe2 4096 Nov 26 14:29 gruppe2
+In diesem Beispiel ist root der Besitzer und gruppe2 die Gruppe die Besitzrechte hat.
+
+Ändern das Besitzers:
+	sudo chown pan:gruppe2 gruppe1
+	#Nach diesem Befehl hat User Pan und die Gruppe gruppe2 alle Besitzrechte an dem Ordner gruppe1
+
+Berechtigungen:
+Die 9 Zeichen am Anfang der Dateicharakterisierung nach dem Befehl ls -l geben Auskunft über die vorhandenen Berechtigungen. 
+drwxr-xr-x 28 pan  pan     4096 Nov 26 13:05 pan
+
+In diesem Fall hat
+	user pan: rwx
+	gruppe pan: r-x
+	others: r-x
+
+	Die Berechtigungen sind intern in Zweierpotenzen organisiert:
+		4 - lesen
+		2 - schreiben
+		1 - ausführen
+
+		3 = schreiben und ausführen
+		5 = lesen und ausführen
+		7 = lesen, schreiben und ausführen
+
+	Ändern der Berechtigung:
+		chmod 754 gruppe1
+			erste Ziffer: Besitzer
+			zweite Ziffer: besitzende Gruppe
+			dritte Ziffer: others
